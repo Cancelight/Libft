@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:55:17 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/07 08:31:49 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/07 11:11:20 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/07 11:11:45 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isascii(int c)
+
+int	ft_isascii(int c)
 {
-    return(c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

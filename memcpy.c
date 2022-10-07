@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 11:13:44 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/07 11:14:06 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/07 10:56:04 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/07 11:53:57 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	return ((unsigned char)c >= 32 && (unsigned char)c <= 126);
+	while(*src)
+	{
+		
+	}
 }

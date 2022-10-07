@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 11:13:44 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/07 11:14:06 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/07 11:17:25 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/07 11:18:20 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlen(const char *s)
 {
-	return ((unsigned char)c >= 32 && (unsigned char)c <= 126);
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
 }

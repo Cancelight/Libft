@@ -6,7 +6,20 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:10:16 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/06 16:10:17 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/07 08:32:10 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+size_t ft_strlen(const char *s)
+{
+    size_t i;
+    i = 0;
+    
+    while (s[i])
+        {
+            i++;
+        }
+    return(i);      
+}

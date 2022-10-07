@@ -6,10 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:01:47 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/06 16:08:13 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/07 08:32:01 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int ft_isprint(int c)
 {
     return((unsigned char)c >= 32 && (unsigned char)c <= 126);

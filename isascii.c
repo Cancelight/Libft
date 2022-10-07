@@ -6,10 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:55:17 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/06 16:00:24 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/07 08:31:49 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int ft_isascii(int c)
 {
     return(c >= 0 && c <= 127);

@@ -6,11 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:17:35 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/06 15:45:33 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/07 08:31:54 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 int ft_isdigit(int c)
 {
     return(c <= 9 && c>=0);

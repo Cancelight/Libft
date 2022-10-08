@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:37:13 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/08 15:43:08 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:44:49 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ int ft_atoi (const char *str)
 	return (number * sign);
 
 }
+//deneme

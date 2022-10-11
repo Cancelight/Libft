@@ -5,20 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 08:25:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 08:43:43 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/08 18:08:35 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/08 18:15:38 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
-
-void *calloc(size_t count, size_t size)
+int main()
 {
-    void *ptr;
-    ptr = malloc(count*size);
-    if (ptr == NULL)
-        return (0);
-    ft_bzero(ptr, size);
-        return(ptr);
+    int *ptr;
+    int i;
+
+    ptr = malloc(9*sizeof(char));
+    while (i < 9)
+    {
+        ((char *)ptr)[i] = "abcdef"[i];
+        i++;
+    }
+    printf("%s", (char *)ptr);
 }

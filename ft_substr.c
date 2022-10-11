@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:05:20 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 12:26:40 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:33:33 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,17 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
     char *ptr;
     if (!s)
         return (0);
-    if(start > ft_sterlen(s))
+    if(start > ft_strlen(s))
         return(0);
-    if(len >= ft_sterlen(s) - start)
-        len = ft_sterlen(s) - start - 1;
+    if(len >= ft_strlen(s) - start)
+        len = ft_strlen(s) - start - 1;
     ptr = ft_strdup(s + start);
-    i = ft_sterlen(ptr);
-     while(ptr[i] && i >len)
+    i = ft_strlen(ptr);
+     while(ptr[i] && i > len)
     {
-        ptr[i] = '/0';
+        ptr[i] = '\0';
         i--;
     }
-    ptr[len + 1] = '\0';
+    ptr[len] = '\0';
     return (ptr);
-    
-    
-    
-        
-        
-    
 }

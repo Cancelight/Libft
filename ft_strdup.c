@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:07:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:33:26 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:39:16 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,4 @@ char *ft_strdup(const char *s1)
         return(0);
     ft_strlcpy(cp, s1, ft_strlen(s1) + 1);
     return(cp);
-}
-#include <stdio.h>
-int main()
-{
-    const char ptr[] = "abcdef";
-    printf("%s", ft_strdup(ptr));
 }

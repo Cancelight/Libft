@@ -6,14 +6,14 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 08:25:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 08:59:00 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:40:11 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void *calloc(size_t count, size_t size)
+void *ft_calloc(size_t count, size_t size)
 {
     void *ptr;
     ptr = malloc(count*size);

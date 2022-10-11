@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:26:30 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:33:23 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:53:14 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
+#include <stdlib.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -39,4 +40,5 @@ char *strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi (const char *str);
 void *ft_calloc(size_t count, size_t size);
 char *ft_strdup(const char *s1);
+char *ft_substr(char const *s, unsigned int start,size_t len);
 #endif

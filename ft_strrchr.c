@@ -6,12 +6,12 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 08:57:15 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/08 09:08:15 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:04:50 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char * strrchr(const char *s, int c)
+char * ft_strrchr(const char *s, int c)
 {
 	int ss;
 

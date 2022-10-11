@@ -6,11 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 07:48:32 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/08 08:56:48 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:04:38 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- char *strchr(const char *s, int c)
+ char *ft_strchr(const char *s, int c)
  {
 	int i;
 

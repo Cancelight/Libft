@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:26:30 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 13:53:14 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:32:50 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,6 @@ int ft_atoi (const char *str);
 void *ft_calloc(size_t count, size_t size);
 char *ft_strdup(const char *s1);
 char *ft_substr(char const *s, unsigned int start,size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
 #endif

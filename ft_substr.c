@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:05:20 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 12:33:33 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/12 16:25:44 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_substr(char const *s, unsigned int start,size_t len)
 {
-    int i;
+    size_t i;
     char *ptr;
     if (!s)
         return (0);

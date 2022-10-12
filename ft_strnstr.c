@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 09:58:24 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:04:44 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/12 16:25:17 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char *strnstr(const char *haystack, const char *needle, size_t len)
 	b = 0;
 
 	if (ft_strlen(needle) == 0)
-		return (haystack);
+		return ((char *)haystack);
 	while(haystack[i])
 	{
 		while (haystack [i + b] == needle[b] && (i + b) < len)
 		{
 			if (needle[b + 1] == '\0')
-				return (haystack);
+				return ((char *)haystack);
 			b++;
 		}
 	i++;

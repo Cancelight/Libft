@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 13:17:33 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 13:37:13 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/13 15:36:53 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         return(0);
     while (i < len)
     {
-        ptr[i] = (f)(i, s[i]);
+        ptr[i] = (*f)(i, s[i]);
         i++;
     }
     ptr[i] = '\0';

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 18:08:35 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/08 18:15:38 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/13 15:14:50 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/13 15:37:03 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-int main()
-{
-    int *ptr;
-    int i;
+#include   "libft.h"
 
-    ptr = malloc(9*sizeof(char));
-    while (i < 9)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
+{  
+    size_t i;
+    
+    if (s == NULL)
+        return(0);
+    i = 0;
+    while (s[i])
     {
-        ((char *)ptr)[i] = "abcdef"[i];
+        (*f)(i, s[i]);
         i++;
     }
-    printf("%s", (char *)ptr);
+    return(s);
 }

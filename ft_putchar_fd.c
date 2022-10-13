@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 23:38:07 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:51:13 by bkiziler         ###   ########.fr       */
+/*   Created: 2022/10/13 19:00:46 by bkiziler          #+#    #+#             */
+/*   Updated: 2022/10/13 19:44:26 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if ((unsigned char)c >= 97 && (unsigned char)c <= 122)
-		return (c - 32);
-	else
-		return (c);
+	write(fd, &c, 1);
 }

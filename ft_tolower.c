@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 23:52:53 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:04:51 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:19:55 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_tolower(int c)
 {
 	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
-		return(c + 32);
+		return (c + 32);
 	else
 		return (c);
 }

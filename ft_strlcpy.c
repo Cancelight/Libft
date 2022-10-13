@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:47:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:04:41 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:15:58 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	s1;
+	int		s1;
 	size_t	i;
 
 	i = 0;

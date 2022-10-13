@@ -6,12 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:25:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 13:15:27 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/13 13:16:05 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void number(int n, char *ptr, int sign, int base)
 {
@@ -54,8 +53,4 @@ char *ft_itoa(int n)
     base--;
     number(n, str, sign, base);
     return(str);
-}
-int main()
-{
-   printf("%s", ft_itoa(-547868));
 }

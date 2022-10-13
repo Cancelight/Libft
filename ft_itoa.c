@@ -6,27 +6,48 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:25:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/12 18:27:34 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:38:59 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char *ft_itoa(int n)
 {
     char *str;
-    int i;
     int base;
-    int a;
+    static int a;
+    int sign;
 
+    sign = 1;
     base = 0;
-    i = 0;
     if (n < 0)
+    {
+        sign = -sign;
         n = -n;
+        base++;
+    }
+    a = n;
     while (a >= 1)
     {
-        a = n / 10;
+        a = a / 10;
         base++;  
     }
     str = malloc((sizeof(char) * base) + 1);
+    base--;
+    a = n;
+    while(a >= 1)
+    {
+        str[base] = (a % 10) + 48;
+        a = a / 10;
+        base--;
+    }
+    if (sign == -1)
+        str[base] = '-';
+    return(str);
+}
+int main()
+{
+   printf("%s", ft_itoa(-42357));
 }

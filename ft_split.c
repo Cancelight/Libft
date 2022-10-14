@@ -6,12 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:52:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:50:53 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/14 13:26:43 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	countc(char const *a, char b)
 {

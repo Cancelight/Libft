@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:26:30 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/14 13:19:05 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/16 15:16:58 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

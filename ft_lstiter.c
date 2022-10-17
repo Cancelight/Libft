@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:32:26 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/17 12:59:26 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:44:11 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list *iter;
 
 	if(!lst || !f)
-		return(0);
+		return ;
 	while (lst != NULL)
 	{
 		iter = lst -> next;

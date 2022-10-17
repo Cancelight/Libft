@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 13:16:58 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/17 14:06:53 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 14:20:36 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (temp == NULL)
 		{
 			del(cont);
-			ft_lstclear(&new, del);
+			ft_lstclear(&temp, del);
 			return(NULL);
 		}
 		ft_lstadd_back(new, temp);

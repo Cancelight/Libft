@@ -6,15 +6,15 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:24:04 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/16 19:41:41 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:56:03 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (lst != NULL)

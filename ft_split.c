@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:52:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 16:50:37 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:50:24 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	countc(char const *a, char b)
 			count++;
 		i++;
 	}
-	if (count == 0 && a != NULL)
+	if (a[0] != b)
 		count ++;
 	return (count);
 }
@@ -61,10 +61,9 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		n = i;
-		while (s[i] != c && s[i] != 0)
+		while (s[i] != c && s[i])
 			i++;
-		ptr[a] = ft_substr(s, n, i - n);
-		a++;
+		ptr[a++] = ft_substr(s, n, i - n);
 	}
 	return (ptr);
 }

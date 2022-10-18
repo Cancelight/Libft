@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:13:44 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:14:19 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:43:22 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	return ((unsigned char)c >= 32 && (unsigned char)c <= 126);
+	return (c >= 32 && c <= 126);
 }

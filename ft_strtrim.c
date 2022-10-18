@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:19:57 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:38:27 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:52:20 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,32 +20,27 @@ int	check(char c, char const *ptr)
 	while (ptr[i])
 	{
 		if (c == ptr[i])
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ptr;
-	int		i;
-	int		n;
+	size_t	n;
 
-	i = 0;
-	n = ft_strlen(s1) - 1;
-	while (s1[i])
-	{
-		if (check (s1[i], set))
-			break ;
-		i++;
-	}
-	while (n >= 0)
-	{
-		if (check (s1[n], set))
-			break ;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	while (check (*s1, set) && s1)
+		s1++;
+	n = ft_strlen(s1);
+	while (check (s1[n - 1], set) && n != 0)
 		n--;
-	}
-	ptr = ft_substr(s1, i, n - i + 1);
+	ptr = (char *)malloc(sizeof(char) *(n + 1));
+	if (ptr == NULL)
+		return (NULL);
+	ft_strlcpy(ptr, s1, n + 1);
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:09:24 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/11 09:04:59 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:40:40 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return (((unsigned char)c >= 65 && (unsigned char)c <= 90) \
-	|| ((unsigned char)c <= 122 && (unsigned char)c >= 97));
+	return ((c >= 65 && c <= 90) || (c <= 122 && c >= 97));
 }

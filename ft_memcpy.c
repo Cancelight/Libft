@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:56:04 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/14 13:26:33 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:24:45 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*a;
 	unsigned char	*b;
 
+	if (!src && !dst)
+		return (0);
 	i = 0;
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;

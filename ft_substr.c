@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:05:20 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:44:07 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:30:00 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start > ft_strlen(s))
-		return (0);
+		return (ft_strdup(""));
 	if (len >= ft_strlen(s) - start)
-		len = ft_strlen(s) - start - 1;
+		len = ft_strlen(s) - start;
 	ptr = ft_strdup(s + start);
 	i = ft_strlen(ptr);
 	while (ptr[i] && i > len)

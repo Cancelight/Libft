@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:46:03 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:33:57 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:47:54 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
 
-	i = 0;
+	if (!dst && !src)
+		return (0);
 	if ((size_t)dst - (size_t)src < len && dst > src)
 	{
-		while (len - 1 < len)
+		i = len - 1;
+		while (i < len)
 		{
-			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
-			len--;
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i--;
 		}
 	}
 	else
 	{
+		i = 0;
 		while (i < len)
 		{
 			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];

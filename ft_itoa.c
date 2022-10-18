@@ -6,52 +6,52 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:25:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:24:07 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 14:50:46 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	number(int n, char *ptr, int sign, int base)
+static long	ft_len(long src)
 {
-	int	a;
+	int	i;
 
-	a = n;
-	while (a >= 1)
+	i = 0;
+	if (src == 0)
+		return (1);
+	if (src < 0)
+		i++;
+	while (src)
 	{
-		ptr[base] = (a % 10) + 48;
-		a = a / 10;
-		base--;
+		src /= 10;
+		i++;
 	}
-	if (sign == -1)
-		ptr[base] = '-';
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	int			base;
-	static int	a;
-	int			sign;
+	char	*ret;
+	int		i;
+	long	num;
 
-	sign = 1;
-	base = 0;
+	num = n;
+	i = ft_len(num);
+	ret = malloc(i + 1);
+	if (ret == NULL)
+		return (NULL);
 	if (n < 0)
 	{
-		sign = -sign;
-		n = -n;
-		base++;
+		num *= -1;
+		ret[0] = '-';
 	}
-	a = n;
-	while (a >= 1)
+	ret[i] = 0;
+	i--;
+	while (i >= (n < 0))
 	{
-		a = a / 10;
-		base++;
+		ret[i] = (num % 10) + '0';
+		num /= 10;
+		i--;
 	}
-	str = malloc((sizeof(char) * base) + 1);
-	if (str == NULL)
-		return (0);
-	base--;
-	number(n, str, sign, base);
-	return (str);
+	return (ret);
 }

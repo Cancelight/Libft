@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:52:29 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/14 13:26:43 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:50:37 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,18 @@ int	countc(char const *a, char b)
 			count++;
 		i++;
 	}
+	if (count == 0 && a != NULL)
+		count ++;
 	return (count);
+}
+
+char	**protect(void)
+{
+	char	**rtn;
+
+	rtn = ft_calloc(1, sizeof(char *));
+	rtn[0] = NULL;
+	return (rtn);
 }
 
 char	**ft_split(char const *s, char c)
@@ -39,11 +50,12 @@ char	**ft_split(char const *s, char c)
 	a = 0;
 	i = 0;
 	n = 0;
-	if (s == NULL)
-		return (0);
+	if (!s || s[0] == 0)
+		return (protect());
 	count = countc(s, c);
-	ptr = malloc(sizeof(char) * (count + 1));
-	i = 0;
+	ptr = ft_calloc(count + 1, sizeof(char *));
+	if (ptr == NULL)
+		return (NULL);
 	while (a < count)
 	{
 		while (s[i] == c)

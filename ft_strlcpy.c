@@ -6,10 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:47:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:15:58 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/10/21 14:51:04 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -28,4 +29,10 @@ unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	dst[i] = '\0';
 	return (s1);
+}
+int main()
+{
+	char dst[] = "abc";
+	ft_strlcpy(dst, "cdefghjkk", 7);
+	printf("%s", dst);
 }

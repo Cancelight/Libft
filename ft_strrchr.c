@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 08:57:15 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/13 19:46:03 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:03:52 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	ss;
+	int	len;
 
-	ss = ft_strlen(s);
-	while (ss >= 0)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (s[ss] == (char)c)
-			return (&((char *)s)[ss]);
-		ss--;
+		if (s[len] == (char)c)
+			return (&((char *)s)[len]);
+		len--;
 	}
 	return (0);
 }

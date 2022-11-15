@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:26:30 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 12:17:03 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:51:44 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

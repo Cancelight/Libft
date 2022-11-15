@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 09:58:24 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 12:16:47 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:15:55 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,26 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	b;
+	size_t	n;
+	size_t	flag;
+	size_t	needle_len;
 
+	needle_len = ft_strlen(needle);
 	i = 0;
-	b = 0;
-	if (*needle == 0)
-		return ((char *)haystack);
-	else if (!haystack || len == 0)
+	if (!needle_len)
+		return ((char *)(haystack));
+	else if (len == 0 || !haystack[0])
 		return (0);
-	while (haystack[i])
+	while (i < len)
 	{
-		b = 0;
-		while (haystack [i + b] == needle[b] && (i + b) < len)
-		{
-			if (needle[b + 1] == '\0')
-				return ((char *)&haystack[i]);
-			b++;
-		}
-	i++;
+		n = i;
+		flag = 0;
+		while ((*(needle + flag) == *(haystack + n)) && *(needle + flag) != '\0'
+			&& n++ < len)
+			flag++;
+		if (flag == needle_len)
+			return ((char *)(haystack + i));
+		i++;
 	}
 	return (0);
 }

@@ -6,30 +6,31 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:05:20 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 12:30:00 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:29:59 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include "libft.h"
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*ptr;
+	size_t	i;
 
 	if (!s)
 		return (0);
-	if (start > ft_strlen(s))
+	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
-	if (len >= ft_strlen(s) - start)
+	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
-	ptr = ft_strdup(s + start);
-	i = ft_strlen(ptr);
-	while (ptr[i] && i > len)
-	{
-		ptr[i] = '\0';
-		i--;
-	}
-	ptr[len] = '\0';
+	i = 0;
+	ptr = ft_calloc(len + 1, sizeof(char));
+	if (!ptr)
+		return (NULL);
+	ptr[len] = 0;
+	while (i < len)
+		ptr[i++] = s[start++];
 	return (ptr);
 }

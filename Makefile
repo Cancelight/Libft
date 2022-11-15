@@ -47,16 +47,14 @@ MAIN = main.c
 OBJS = ${SRCS:.c=.o}
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 LIBC = ar rc
-OUT = ./a.out
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
 	@${LIBC} ${NAME} ${OBJS}
-	@echo "\x1b[31m31 SJ\x1b[0m"
 
 .c.o:
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}

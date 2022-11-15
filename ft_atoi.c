@@ -6,33 +6,37 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:37:13 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 12:22:32 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:13:18 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
-	int	sign;
-	int	i;
-	int	number;
+	int		i;
+	long	back;
+	int		np;
 
-	number = 0;
-	sign = 1;
+	back = 0;
+	np = 1;
 	i = 0;
-	while (str[i] == 32 || (str[i] >= '\t' && str[i] <= '\r'))
+	while ((s[i] <= 13 && s[i] >= 9) || s[i] == 32)
 		i++;
-	if (str[i] == 43 || str[i] == 45)
+	if (s[i] == 43 || s[i] == 45)
 	{
-		if (str[i] == 45)
-			sign *= -1;
+		if (s[i] == 45)
+			np *= -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (s[i] >= 48 && s[i] <= 57)
 	{
-		number = (str[i] - 48) + (number * 10);
+		back = back * 10 + (s[i] - 48) * np;
+		if (back > 2147483647)
+			return (-1);
+		if (back < -2147483648)
+			return (0);
 		i++;
 	}
-	return (number * sign);
+	return ((int)back);
 }

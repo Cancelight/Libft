@@ -42,6 +42,7 @@ BSRCS = ft_lstnew.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c
+
 BOBJS = $(BSRCS:.c=.o)
 MAIN = main.c
 OBJS = ${SRCS:.c=.o}
@@ -61,6 +62,7 @@ ${NAME}: ${OBJS}
 
 bonus: ${OBJS} ${BOBJS}
 	${LIBC} ${NAME} ${OBJS} ${BOBJS}
+
 clean:
 	@${RM} ${OBJS} ${BOBJS}
 

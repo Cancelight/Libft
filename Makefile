@@ -60,7 +60,7 @@ ${NAME}: ${OBJS}
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 bonus: ${OBJS} ${BOBJS}
-	${LIBC} ${NAME} ${OBJS} ${BOBJS}
+	@${LIBC} ${NAME} ${OBJS} ${BOBJS}
 
 clean:
 	@${RM} ${OBJS} ${BOBJS}

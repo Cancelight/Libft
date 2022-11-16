@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 19:09:14 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/11/16 13:58:18 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:07:06 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
-	if(!s)
-		return;
+
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

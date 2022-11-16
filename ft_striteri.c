@@ -6,7 +6,7 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:14:50 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/14 13:03:02 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:59:01 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
+	if(!s)
+		return;
 	i = 0;
 	while (s[i] && !(s == NULL))
 	{

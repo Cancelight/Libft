@@ -44,7 +44,6 @@ BSRCS = ft_lstnew.c \
 		ft_lstmap.c
 
 BOBJS = $(BSRCS:.c=.o)
-MAIN = main.c
 OBJS = ${SRCS:.c=.o}
 NAME = libft.a
 CC = gcc

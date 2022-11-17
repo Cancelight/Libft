@@ -6,12 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 11:19:44 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/11/09 17:47:46 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:14:03 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

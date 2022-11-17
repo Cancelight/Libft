@@ -6,13 +6,13 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:47:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/11/09 17:52:39 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:22:55 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	int		s1;
 	size_t	i;

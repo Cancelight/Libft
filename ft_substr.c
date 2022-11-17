@@ -6,11 +6,9 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:05:20 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/11/15 19:29:59 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:15:18 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 

@@ -6,13 +6,13 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:25:56 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/10/18 14:50:46 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/17 12:38:18 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	ft_len(long src)
+long	ft_len(long src)
 {
 	int	i;
 

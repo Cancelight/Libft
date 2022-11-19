@@ -6,13 +6,11 @@
 /*   By: bkiziler <bkiziler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 14:37:13 by bkiziler          #+#    #+#             */
-/*   Updated: 2022/11/19 13:16:47 by bkiziler         ###   ########.fr       */
+/*   Updated: 2022/11/19 13:17:33 by bkiziler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int a;
 
 int	ft_atoi(const char *s)
 {
